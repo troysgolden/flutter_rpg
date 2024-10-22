@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
       ),
       body: Container(
         padding: const EdgeInsets.all(16.0),
-        child: const Text('Home'),
+        child: const Text('Home Page'),
       ),
     );
   }
