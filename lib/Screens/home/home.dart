@@ -21,10 +21,11 @@ class _HomeState extends State<Home> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              const StyledText('Character List'), //Body Text
+              const StyledText('Character Lists'), //Body Text
               const StyledHeading('Character Name'),
-              const StyledTitle('Character Name',
-                  ),
+              const StyledTitle(
+                'Character Name',
+              ),
 
               FilledButton(
                 onPressed: () {},
