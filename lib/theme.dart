@@ -27,7 +27,7 @@ ThemeData primaryTheme = ThemeData(
     centerTitle: true,
   ),
   //text theme
-  textTheme: TextTheme().copyWith(
+  textTheme: const TextTheme().copyWith(
     bodyMedium: TextStyle(
       color: AppColors.textColor,
       fontSize: 16,
