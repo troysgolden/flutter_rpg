@@ -11,7 +11,7 @@ import 'package:flutter_rpg/theme.dart';
 /// [Home] widget as the home and [primaryTheme] as the theme.
 void main() {
   runApp(MaterialApp(
-    home: const Sandbox(),
+    home: const Home(),
     theme: primaryTheme,
   ));
 }
