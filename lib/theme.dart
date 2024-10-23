@@ -10,3 +10,19 @@ class AppColors {
   static Color successColor = const Color.fromRGBO(9, 149, 110, 1);
   static Color highlightColor = const Color.fromRGBO(212, 172, 13, 1);
 }
+
+ThemeData primaryTheme = ThemeData(
+  //seed color
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: AppColors.primaryColor,
+  ),
+  //scaffold color,
+  //app bar theme colors,
+  appBarTheme: AppBarTheme(
+    backgroundColor: AppColors.secondaryColor,
+    foregroundColor: AppColors.textColor,
+    surfaceTintColor: Colors.transparent,
+    centerTitle: true,
+  ),
+  scaffoldBackgroundColor: AppColors.secondaryAccent,
+);
