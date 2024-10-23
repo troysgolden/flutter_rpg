@@ -1,5 +1,10 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_rpg/Screens/home/home.dart';
+
+///fluter create flutter rpg <--this created the project
+///////  code . ///// opens it up in the editor
 
 void main() {
   runApp(const MaterialApp(home: Home()));
