@@ -16,7 +16,9 @@ ThemeData primaryTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
     seedColor: AppColors.primaryColor,
   ),
-  //scaffold color,
+//scaffold color
+  scaffoldBackgroundColor: AppColors.secondaryAccent,
+
   //app bar theme colors,
   appBarTheme: AppBarTheme(
     backgroundColor: AppColors.secondaryColor,
@@ -24,5 +26,24 @@ ThemeData primaryTheme = ThemeData(
     surfaceTintColor: Colors.transparent,
     centerTitle: true,
   ),
-  scaffoldBackgroundColor: AppColors.secondaryAccent,
+  //text theme
+  textTheme: TextTheme().copyWith(
+    bodyMedium: TextStyle(
+      color: AppColors.textColor,
+      fontSize: 16,
+      letterSpacing: 1,
+    ),
+    headlineMedium: TextStyle(
+      color: AppColors.titleColor,
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 1,
+    ),
+    titleMedium: TextStyle(
+      color: AppColors.titleColor,
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 2,
+    ),
+  ),
 );
