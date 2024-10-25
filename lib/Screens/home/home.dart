@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rpg/shared/styled_button.dart';
 
 import '../../shared/styled_text.dart';
 
@@ -27,9 +28,9 @@ class _HomeState extends State<Home> {
                 'Character Name',
               ),
 
-              FilledButton(
+              StyledButton(
                 onPressed: () {},
-                child: const Text('Create New'),
+                child: const StyledHeading('Create New'),
               )
             ],
           )),
