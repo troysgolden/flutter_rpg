@@ -11,6 +11,20 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List characters = [
+    'mario',
+    'luigi',
+    'peach',
+    'yoshi',
+    'toad',
+    'daisy',
+    'peach',
+    'bowser',
+    'koopa',
+    'wario',
+    'donkey kong'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,22 +32,27 @@ class _HomeState extends State<Home> {
         title: const StyledHeading('Your Characters'),
         centerTitle: true,
       ),
-      body: Container(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              const StyledText('Character Lists'), //Body Text
-              const StyledHeading('Character Name'),
-              const StyledTitle(
-                'Character Name',
-              ),
-
-              StyledButton(
-                onPressed: () {},
-                child: const StyledHeading('Create New'),
-              )
-            ],
-          )),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemCount: characters.length,
+              itemBuilder: (_, index) {
+                return Container(
+                  color: Colors.grey[800],
+                  padding: const EdgeInsets.all(40.0),
+                  margin: const EdgeInsets.only(bottom: 40),
+                  child: Text(characters[index]),
+                );
+              },
+            ),
+          ),
+          StyledButton(
+            onPressed: () {},
+            child: const StyledHeading('Create New'),
+          ),
+        ],
+      ),
     );
   }
 }
