@@ -21,3 +21,9 @@ Character Model (class)
         -> defense (int)
         -> skill (int)
         -> points (int)
+
+
+        algo wizard
+        code junkie
+        terminal raider
+        ux ninja
