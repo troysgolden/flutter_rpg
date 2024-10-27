@@ -41,5 +41,4 @@ enum Vocation {
 
 void main() {
   Vocation v = Vocation.ninja;
-  print (v.title);
 }
