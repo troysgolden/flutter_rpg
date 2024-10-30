@@ -38,7 +38,3 @@ enum Vocation {
   final String weapon;
   final String ability;
 }
-
-void main() {
-  Vocation v = Vocation.ninja;
-}

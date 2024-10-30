@@ -1,4 +1,5 @@
-import 'package:flutter_masterclass/models/vocation.dart';
+
+import 'package:flutter_rpg/models/vocation.dart';
 
 class Skill {
   final String id;
