@@ -33,6 +33,7 @@ class Character with Stats {
   }
 }
 
+<<<<<<< Updated upstream
 //dummy character data
 
 List<Character> characters = [
@@ -42,3 +43,32 @@ List<Character> characters = [
   Character(id: '4', name: 'Spencer', vocation: Vocation.ninja, slogan: 'Beep Boop'),
 
 ];
+=======
+//dummy data
+List<Character> characters = [
+  Character(
+    id: "1",
+    name: "Jezic",
+    slogan: "Fire It Up",
+    vocation: Vocation.junkie,
+  ),
+  Character(
+    id: "2",
+    name: "Nexus",
+    slogan: "Fast and stealthy",
+    vocation: Vocation.ninja,
+  ),
+  Character(
+    id: "3",
+    name: "Wylan",
+    slogan: "Abracadabra",
+    vocation: Vocation.wizard,
+  ),
+  Character(
+    id: "4",
+    name: "Rayna",
+    slogan: "Lets Get Hyped",
+    vocation: Vocation.raider,
+  ),
+];
+>>>>>>> Stashed changes
