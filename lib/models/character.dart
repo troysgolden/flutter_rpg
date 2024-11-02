@@ -55,7 +55,7 @@ List<Character> characters = [
   ),
   Character(
     id: "4",
-    name: "Rayna",
+    name: "Raynal",
     slogan: "Lets Get Hyped",
     vocation: Vocation.raider,
   ),
