@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rpg/Screens/create/create.dart';
 import 'package:flutter_rpg/screens/home/home.dart';
 import 'package:flutter_rpg/theme.dart';
 
@@ -11,7 +12,7 @@ import 'package:flutter_rpg/theme.dart';
 /// [Home] widget as the home and [primaryTheme] as the theme.
 void main() {
   runApp(MaterialApp(
-    home: const Home(),
+    home: const Create(),
     theme: primaryTheme,
   ));
 }
@@ -33,4 +34,3 @@ class Sandbox extends StatelessWidget {
     );
   }
 }
-
