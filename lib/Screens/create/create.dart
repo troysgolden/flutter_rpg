@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rpg/shared/styled_text.dart';
 import 'package:flutter_rpg/theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Create extends StatefulWidget {
   const Create({super.key});
@@ -19,19 +20,44 @@ class _CreateState extends State<Create> {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-        child: Column(
-          children: [
-            //welcome text,
-            Center(
-              child: Icon(Icons.code, color: AppColors.primaryColor),
+        child: Column(children: [
+          //welcome text,
+          Center(
+            child: Icon(Icons.code, color: AppColors.primaryColor),
+          ),
+          const Center(child: StyledHeading('Welcome, new player')),
+          const Center(
+              child:
+                  StyledText('Create a name and slogan for your character.')),
+          const SizedBox(height: 30),
+          //input for name and slogan,
+          const SizedBox(height: 30),
+
+          //input for name and slogan,
+          TextField(
+            style: GoogleFonts.kanit(
+              textStyle: Theme.of(context).textTheme.bodyMedium,
             ),
-            const Center(child: StyledHeading('Welcome, new player')),
-            const Center(
-                child:
-                    StyledText('Create a name and slogan for your character.')),
-            const SizedBox(height: 30),
-          ],
-        ),
+            cursorColor: AppColors.textColor,
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.person_2),
+              label: Text('Character name'),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          TextField(
+            style: GoogleFonts.kanit(
+              textStyle: Theme.of(context).textTheme.bodyMedium,
+            ),
+            cursorColor: AppColors.textColor,
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.chat),
+              label: Text('Character slogan'),
+            ),
+          ),
+        ]),
       ),
     );
   }
