@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rpg/shared/styled_button.dart';
 import 'package:flutter_rpg/shared/styled_text.dart';
 import 'package:flutter_rpg/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,8 +22,23 @@ class _CreateState extends State<Create> {
     super.dispose();
   }
 
+  // submit handler
+  void handleSubmit() {
+    if (_nameController.text.trim().isEmpty) {
+      print('Name is required');
+      return;
+    }
+    if (_sloganController.text.trim().isEmpty) {
+      print('Slogan is required');
+      return;
+    }
+    print('Name: ${_nameController.text}');
+    print('Slogan: ${_sloganController.text}');
+  }
+@override
   Widget build(BuildContext context) {
-    return Scaffold(
+
+return Scaffold(
       appBar: AppBar(
         title: const StyledTitle('Character Creation'),
         centerTitle: true,
@@ -66,6 +82,14 @@ class _CreateState extends State<Create> {
             decoration: const InputDecoration(
               prefixIcon: Icon(Icons.chat),
               label: Text('Character slogan'),
+            ),
+          ),
+          const SizedBox(height: 30),
+          //create button
+          Center(
+            child: StyledButton(
+              onPressed:  handleSubmit,
+              child: const StyledHeading('Create Character'),
             ),
           ),
         ]),
