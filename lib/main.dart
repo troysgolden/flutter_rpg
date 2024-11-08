@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rpg/Screens/create/create.dart';
+//import 'package:flutter_rpg/Screens/create/create.dart';
 import 'package:flutter_rpg/screens/home/home.dart';
 import 'package:flutter_rpg/theme.dart';
 
-///fluter create flutter rpg <--this created the project
-///////  code . ///// opens it up in the editor
-
-/// The main entry point for the application.
-///
-/// This function runs the application. It builds a [MaterialApp] with the
-/// [Home] widget as the home and [primaryTheme] as the theme.
 void main() {
   runApp(MaterialApp(
-    home: const Create(),
+    home: const Home(),
     theme: primaryTheme,
   ));
 }
