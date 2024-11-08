@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rpg/models/character.dart';
 import 'package:flutter_rpg/models/vocation.dart';
 import 'package:flutter_rpg/screens/create/vocation_card.dart';
 import 'package:flutter_rpg/shared/styled_button.dart';
 import 'package:flutter_rpg/shared/styled_text.dart';
 import 'package:flutter_rpg/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:uuid/uuid.dart';
+
+var uuid = const Uuid();
 
 class Create extends StatefulWidget {
   const Create({super.key});
@@ -35,15 +39,23 @@ class _CreateState extends State<Create> {
   // submit handler
   void handleSubmit() {
     if (_nameController.text.trim().isEmpty) {
-      print('Name is required');
+      // print('Name is required');
+      //shoe error dialog.
       return;
     }
     if (_sloganController.text.trim().isEmpty) {
-      print('Slogan is required');
+      //print('Slogan is required');
+      //shoe error dialog.
       return;
     }
-    print('Name: ${_nameController.text}');
-    print('Slogan: ${_sloganController.text}');
+    characters.add(Character(
+      id: uuid.v4(),
+      name: _nameController.text.trim(),
+      slogan: _sloganController.text.trim(),
+      vocation: selectedVocation,
+    ));
+    //print('Name: ${_nameController.text}');
+    // print('Slogan: ${_sloganController.text}');
   }
 
   @override
@@ -96,8 +108,8 @@ class _CreateState extends State<Create> {
               ),
             ),
             const SizedBox(height: 30),
-            //select vocation title
 
+            //select vocation title
             Center(
               child: Icon(Icons.code, color: AppColors.primaryColor),
             ),
@@ -105,8 +117,7 @@ class _CreateState extends State<Create> {
             const Center(
                 child: StyledText('This determines your stats and skills.')),
             const SizedBox(height: 30),
-            //input for name and slogan,
-            const SizedBox(height: 30),
+
             //vocation cards
             VocationCard(
               selected: selectedVocation == Vocation.junkie,
@@ -128,6 +139,15 @@ class _CreateState extends State<Create> {
               onTap: updateVocation,
               vocation: Vocation.wizard,
             ),
+
+            // good luck message
+            Center(
+              child: Icon(Icons.code, color: AppColors.primaryColor),
+            ),
+            const Center(child: StyledHeading('Good Luck.')),
+            const Center(child: StyledText('And enjoy the journey....')),
+            const SizedBox(height: 30),
+
             //create button
             Center(
               child: StyledButton(
