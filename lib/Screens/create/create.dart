@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rpg/Screens/home/home.dart';
 import 'package:flutter_rpg/models/character.dart';
 import 'package:flutter_rpg/models/vocation.dart';
 import 'package:flutter_rpg/screens/create/vocation_card.dart';
@@ -54,6 +55,11 @@ class _CreateState extends State<Create> {
       slogan: _sloganController.text.trim(),
       vocation: selectedVocation,
     ));
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (ctx) => const Home(),
+        ));
     //print('Name: ${_nameController.text}');
     // print('Slogan: ${_sloganController.text}');
   }
