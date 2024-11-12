@@ -31,7 +31,7 @@ class CharacterCard extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (ctx) => const Profile(),
+                      builder: (ctx) => Profile(character: character),
                     ));
               },
               icon: Icon(Icons.arrow_forward, color: AppColors.textColor)),
