@@ -40,13 +40,44 @@ class _CreateState extends State<Create> {
   // submit handler
   void handleSubmit() {
     if (_nameController.text.trim().isEmpty) {
-      // print('Name is required');
-      //shoe error dialog.
+      showDialog(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          title: const StyledHeading('Missing Character Name'),
+          content: const StyledText('Please enter a name for your character.'),
+          actions: [
+            StyledButton(
+              child: const StyledHeading('Close'),
+              onPressed: () {
+                Navigator.pop(ctx);
+              },
+            ),
+          ],
+          actionsAlignment: MainAxisAlignment.center,
+        ),
+      );
+
       return;
     }
     if (_sloganController.text.trim().isEmpty) {
-      //print('Slogan is required');
-      //shoe error dialog.
+      showDialog(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          title: const StyledHeading('Missing Character Slogan'),
+          content:
+              const StyledText('Please enter a slogan for your character.'),
+          actions: [
+            StyledButton(
+              child: const StyledHeading('Close'),
+              onPressed: () {
+                Navigator.pop(ctx);
+              },
+            ),
+          ],
+          actionsAlignment: MainAxisAlignment.center,
+        ),
+      );
+
       return;
     }
     characters.add(Character(
