@@ -36,15 +36,38 @@ class Profile extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        StyledText(character.vocation.title),
-                        const SizedBox(height: 16),
+                        StyledHeading(character.vocation.title),
                         StyledText(character.vocation.description),
                       ],
                     ),
                   ),
                 ])),
 
-            //weapon and ability,
+            //weapon and ability, slogan
+            const SizedBox(height: 20),
+            Center(child: Icon(Icons.code, color: AppColors.primaryColor)),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(16),
+                color: AppColors.secondaryColor.withOpacity(0.5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const StyledHeading('Slogan'),
+                    StyledText(character.slogan),
+                    const SizedBox(height: 10),
+                    const StyledHeading('Weapon'),
+                    StyledText(character.vocation.weapon),
+                    const SizedBox(height: 10),
+                    const StyledHeading('Ability'),
+                    StyledText(character.vocation.ability),
+                    const SizedBox(height: 10),
+                  ],
+                ),
+              ),
+            ),
 
             //stats and skills,
 
